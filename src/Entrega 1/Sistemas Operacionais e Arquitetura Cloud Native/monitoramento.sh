@@ -1,8 +1,8 @@
 #!/bin/bash
 # =============================================================================
 # monitoramento.sh — Script de Monitoramento do Sistema
-# Projeto: Clínica Maya — App Android + Backend Spring Boot
-# Disciplina: Infraestrutura e Automação com Linux
+# Projeto: Clínica Maya App
+# Disciplina: Sistemas Operacionais e Arquitetura Cloud Native
 # =============================================================================
 
 # ── Cores ─────────────────────────────────────────────────────────────────────
@@ -40,7 +40,7 @@ alerta() {
 # ── Coletar CPU ───────────────────────────────────────────────────────────────
 get_cpu() {
   CPU=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d'%' -f1 | tr -d ' ')
-  # Fallback para sistemas onde o formato é diferente
+  # Fallback 
   if [ -z "$CPU" ]; then
     CPU=$(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf "%.1f", usage}')
   fi
@@ -129,7 +129,7 @@ for ((i=1; i<=TOTAL_COLETAS; i++)); do
 
   TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
-  # ── Exibir no terminal ──────────────────────────────────────────────────────
+  # ── Exibição no terminal ──────────────────────────────────────────────────────
   echo -e "${BLUE}── Coleta $i/$TOTAL_COLETAS — $TIMESTAMP ──────────────────${NC}"
 
   # CPU
