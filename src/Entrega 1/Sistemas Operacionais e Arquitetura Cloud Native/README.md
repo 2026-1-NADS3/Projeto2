@@ -1,14 +1,14 @@
 # Scripts de Infraestrutura e Automação com Linux
-**Projeto:** Clínica Maya — App Android + Backend Spring Boot  
-**Disciplina:** Infraestrutura e Automação com Linux  
+**Projeto:** Clínica Maya  APP 
+**Disciplina:** Sistemas Operacionais e Arquitetura Cloud Native
 
 ---
 
 ## Como executar no Windows
 
-Como o Windows não roda scripts `.sh` nativamente, você precisa de uma das opções abaixo:
+Como o Windows não roda scripts `.sh` nativamente, é necessário uma das opções abaixo:
 
-### Opção 1 — WSL (recomendado)
+### Opção 1 — WSL 
 1. Abra o **Prompt de Comando** ou **PowerShell** como administrador
 2. Execute: `wsl --install` (reinicie o PC depois)
 3. Abra o **WSL** (Ubuntu) pelo menu iniciar
@@ -53,7 +53,7 @@ Automatiza a instalação e configuração de todas as dependências necessária
 ### Como executar?
 
 ```bash
-# Dar permissão de execução
+# Conceder permissão de execução
 chmod +x setup.sh
 
 # Executar
@@ -118,7 +118,7 @@ Coleta e exibe métricas do sistema em tempo real enquanto o projeto está em ex
 | Memória | 85% |
 | Disco | 90% |
 
-> Você pode alterar esses valores nas variáveis `ALERTA_CPU`, `ALERTA_MEM` e `ALERTA_DISCO` no início do script.
+> É possível esses valores nas variáveis `ALERTA_CPU`, `ALERTA_MEM` e `ALERTA_DISCO` no início do script.
 
 ### Configurações padrão
 
@@ -127,7 +127,7 @@ INTERVALO=5       # coleta a cada 5 segundos
 TOTAL_COLETAS=12  # 12 coletas = ~1 minuto de monitoramento
 ```
 
-> Para monitorar por mais tempo, aumente `TOTAL_COLETAS`. Exemplo: 60 coletas × 5s = 5 minutos.
+> Para monitorar por mais tempo, é necessário aumentar `TOTAL_COLETAS`. Exemplo: 60 coletas × 5s = 5 minutos.
 
 ### Como executar?
 
