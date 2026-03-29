@@ -1,8 +1,8 @@
 #!/bin/bash
 # =============================================================================
 # setup.sh — Script de Setup do Ambiente
-# Projeto: Clínica Maya — App Android + Backend Spring Boot
-# Disciplina: Infraestrutura e Automação com Linux
+# Projeto: Clínica Maya APP
+# Disciplina: Sistemas Operacionais e Arquitetura Cloud Native
 # =============================================================================
 
 # ── Cores para output ─────────────────────────────────────────────────────────
