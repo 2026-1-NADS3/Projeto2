@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- CARD EXERCÍCIOS -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/card_gray_light_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <View
+                android:id="@+id/vIconBackground1"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_teal_card_gradient"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_exercises_dumbbell"
+                android:tint="@android:color/white"
+                app:layout_constraintTop_toTopOf="@id/vIconBackground1"
+                app:layout_constraintBottom_toBottomOf="@id/vIconBackground1"
+                app:layout_constraintStart_toStartOf="@id/vIconBackground1"
+                app:layout_constraintEnd_toEndOf="@id/vIconBackground1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meus Exercícios"
+                android:textSize="14sp"
+                android:textColor="@color/background_teal"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/vIconBackground1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- CARD HISTÓRICO -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/card_gray_light_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <View
+                android:id="@+id/vIconBackground2"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_circular_placeholder"
+                android:backgroundTint="@color/bg_history_soft_pink"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_history"
+                android:tint="@color/icon_history_red"
+                app:layout_constraintTop_toTopOf="@id/vIconBackground2"
+                app:layout_constraintBottom_toBottomOf="@id/vIconBackground2"
+                app:layout_constraintStart_toStartOf="@id/vIconBackground2"
+                app:layout_constraintEnd_toEndOf="@id/vIconBackground2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver Histórico"
+                android:textSize="14sp"
+                android:textColor="@color/background_teal"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/vIconBackground2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

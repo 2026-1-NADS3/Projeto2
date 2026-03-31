@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MayaApp</string>
+
+    <string name="app_title_main">MAYA</string>
+    <string name="greeting_user">Olá, Paciente!</string>
+
+    <string name="sub_title_name">Maya Yamamoto</string>
+    <string name="sub_title_profession">Fisioterapia &amp; RPG</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Senha</string>
+    <string name="forgot_password_link">Esqueceu a senha?</string>
+    <string name="button_enter_text">Entrar</string>
+    <string name="or_separator_text">ou</string>
+    <string name="no_account_text">Não tem uma conta?</string>
+    <string name="signup_link_text">Cadastre-se</string>
+    <string name="version_text">v1.0.0</string>
+
+    <string name="section_treatment">Meu Tratamento</string>
+    <string name="doctor_info">Dra. Maya Yamamoto - RPG</string>
+    <string name="section_categories">Categorias</string>
+    <string name="section_quick_actions">Ações Rápidas</string>
+    <string name="section_next_consultations">Próximas Consultas</string>
+
+    <string name="label_exercises">Exercícios</string>
+    <string name="label_today">Hoje</string>
+    <string name="label_avg_pain">Dor Média</string>
+
+    <string name="action_my_exercises">Meus Exercícios</string>
+    <string name="action_view_history">Ver Histórico</string>
+
+    <string name="cat_stretching">Alongamento</string>
+    <string name="cat_strengthening">Fortalecimento</string>
+    <string name="cat_breathing">Respiração</string>
+    <string name="cat_mobility">Mobilidade</string>
+
+    <string name="patient_name_example">João Silva</string>
+    <string name="consultation_time">10:00</string>
+    <string name="consultation_type">RPG - Reeducação Postural</string>
+    <string name="status_confirmed">Confirmada</string>
+
+
+</resources>
