@@ -192,4 +192,4 @@ docker ps
 | `DB_PASSWORD` | Senha do banco | — |
 | `DB_NAME` | Nome do banco | `clinica` |
 
-> ⚠️ Nunca commite o arquivo `.env` com senhas reais. Use o `.env.example` como referência.
+
