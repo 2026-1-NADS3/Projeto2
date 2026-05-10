@@ -1,0 +1,6 @@
+com.mayarpg.app.test.app-androidTest-0 C:\Users\marlene augusto\OneDrive\Documentos\GitHub\mayarpg.hidex\maya-rpg\android-app\app\build\generated\res\resValues\androidTest\debug
+com.mayarpg.app.test.app-mergeDebugAndroidTestResources-1 C:\Users\marlene augusto\OneDrive\Documentos\GitHub\mayarpg.hidex\maya-rpg\android-app\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.mayarpg.app.test.app-mergeDebugAndroidTestResources-2 C:\Users\marlene augusto\OneDrive\Documentos\GitHub\mayarpg.hidex\maya-rpg\android-app\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.mayarpg.app.test.app-merged_res-3 C:\Users\marlene augusto\OneDrive\Documentos\GitHub\mayarpg.hidex\maya-rpg\android-app\app\build\intermediates\merged_res\debugAndroidTest
+com.mayarpg.app.test.app-core-1.5.0-4 C:\gradle-home\caches\8.13\transforms\7a4af84a007a4461692f6eaf0a9f8315\transformed\core-1.5.0\res
+com.mayarpg.app.test.app-annotation-experimental-1.3.1-5 C:\gradle-home\caches\8.13\transforms\85c22c6f51ac6a8bd54cf2cd4c69a1bd\transformed\annotation-experimental-1.3.1\res

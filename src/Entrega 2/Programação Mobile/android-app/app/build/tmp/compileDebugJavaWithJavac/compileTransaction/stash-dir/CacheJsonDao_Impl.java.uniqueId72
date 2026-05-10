@@ -1,0 +1,170 @@
+package com.mayarpg.app.local.dao;
+
+import android.database.Cursor;
+import androidx.annotation.NonNull;
+import androidx.room.EntityInsertionAdapter;
+import androidx.room.RoomDatabase;
+import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
+import androidx.room.util.CursorUtil;
+import androidx.room.util.DBUtil;
+import androidx.sqlite.db.SupportSQLiteStatement;
+import com.mayarpg.app.local.entities.CacheJson;
+import java.lang.Class;
+import java.lang.Override;
+import java.lang.String;
+import java.lang.SuppressWarnings;
+import java.util.Collections;
+import java.util.List;
+import javax.annotation.processing.Generated;
+
+@Generated("androidx.room.RoomProcessor")
+@SuppressWarnings({"unchecked", "deprecation"})
+public final class CacheJsonDao_Impl implements CacheJsonDao {
+  private final RoomDatabase __db;
+
+  private final EntityInsertionAdapter<CacheJson> __insertionAdapterOfCacheJson;
+
+  private final SharedSQLiteStatement __preparedStmtOfApagar;
+
+  private final SharedSQLiteStatement __preparedStmtOfLimparTudo;
+
+  public CacheJsonDao_Impl(@NonNull final RoomDatabase __db) {
+    this.__db = __db;
+    this.__insertionAdapterOfCacheJson = new EntityInsertionAdapter<CacheJson>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "INSERT OR REPLACE INTO `cache_json` (`chave`,`json`,`atualizadoEm`) VALUES (?,?,?)";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement, final CacheJson entity) {
+        if (entity.chave == null) {
+          statement.bindNull(1);
+        } else {
+          statement.bindString(1, entity.chave);
+        }
+        if (entity.json == null) {
+          statement.bindNull(2);
+        } else {
+          statement.bindString(2, entity.json);
+        }
+        statement.bindLong(3, entity.atualizadoEm);
+      }
+    };
+    this.__preparedStmtOfApagar = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "DELETE FROM cache_json WHERE chave = ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfLimparTudo = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "DELETE FROM cache_json";
+        return _query;
+      }
+    };
+  }
+
+  @Override
+  public void salvar(final CacheJson cache) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __insertionAdapterOfCacheJson.insert(cache);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void apagar(final String chave) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfApagar.acquire();
+    int _argIndex = 1;
+    if (chave == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, chave);
+    }
+    try {
+      __db.beginTransaction();
+      try {
+        _stmt.executeUpdateDelete();
+        __db.setTransactionSuccessful();
+      } finally {
+        __db.endTransaction();
+      }
+    } finally {
+      __preparedStmtOfApagar.release(_stmt);
+    }
+  }
+
+  @Override
+  public void limparTudo() {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfLimparTudo.acquire();
+    try {
+      __db.beginTransaction();
+      try {
+        _stmt.executeUpdateDelete();
+        __db.setTransactionSuccessful();
+      } finally {
+        __db.endTransaction();
+      }
+    } finally {
+      __preparedStmtOfLimparTudo.release(_stmt);
+    }
+  }
+
+  @Override
+  public CacheJson buscar(final String chave) {
+    final String _sql = "SELECT * FROM cache_json WHERE chave = ? LIMIT 1";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (chave == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, chave);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfChave = CursorUtil.getColumnIndexOrThrow(_cursor, "chave");
+      final int _cursorIndexOfJson = CursorUtil.getColumnIndexOrThrow(_cursor, "json");
+      final int _cursorIndexOfAtualizadoEm = CursorUtil.getColumnIndexOrThrow(_cursor, "atualizadoEm");
+      final CacheJson _result;
+      if (_cursor.moveToFirst()) {
+        _result = new CacheJson();
+        if (_cursor.isNull(_cursorIndexOfChave)) {
+          _result.chave = null;
+        } else {
+          _result.chave = _cursor.getString(_cursorIndexOfChave);
+        }
+        if (_cursor.isNull(_cursorIndexOfJson)) {
+          _result.json = null;
+        } else {
+          _result.json = _cursor.getString(_cursorIndexOfJson);
+        }
+        _result.atualizadoEm = _cursor.getLong(_cursorIndexOfAtualizadoEm);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @NonNull
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
+  }
+}
