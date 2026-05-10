@@ -12,9 +12,9 @@ seus exercícios e backend Node.js + MySQL.
 
 ```
 maya-rpg/
-├── android-app/      # App Android (Java)
-├── backend/          # API REST (Node.js + Express)
-├── database/         # Script SQL (schema + dados de teste)
+├── Aplicativo/      # App Android (Java)
+├── Backend/          # API REST (Node.js + Express)
+├── BancoDeDados/         # Script SQL (schema + dados de teste)
 └── README.md
 ```
 
@@ -200,23 +200,23 @@ Após importar `maya_rpg_completo.sql`, três usuários estão prontos:
 
 ---
 
-## ✨ Funcionalidades do app
+##  Funcionalidades do app
 
-- 🔐 **Login + Cadastro** com validação de CPF/telefone/email + LGPD
-- 🏠 **Home** com saudação, resumo do tratamento e atalhos para categorias
-- 💪 **Meus Exercícios** com filtro por categoria
+-  **Login + Cadastro** com validação de CPF/telefone/email + LGPD
+-  **Home** com saudação, resumo do tratamento e atalhos para categorias
+-  **Meus Exercícios** com filtro por categoria
   (alongamento / fortalecimento / respiração / mobilidade)
-- ✅ **Registrar Execução** com slider de dor 0-10 e observações
-- 📈 **Histórico** com gráfico de evolução da dor e estatísticas
-- 🔔 **Notificações** (lembretes, consultas, progresso, sistema)
-- 📅 **Agendamento** de consultas (escolhe serviço, data e horário)
-- 👤 **Perfil** com dados pessoais, clínica, pagamentos e tema escuro
-- 📦 **Cache offline** (SQLite via Room) — Home, Exercícios, Histórico,
+-  **Registrar Execução** com slider de dor 0-10 e observações
+-  **Histórico** com gráfico de evolução da dor e estatísticas
+-  **Notificações** (lembretes, consultas, progresso, sistema)
+-  **Agendamento** de consultas (escolhe serviço, data e horário)
+-  **Perfil** com dados pessoais, clínica, pagamentos e tema escuro
+-  **Cache offline** (SQLite via Room) — Home, Exercícios, Histórico,
   Perfil e Pagamentos funcionam mesmo sem internet
 
 ---
 
-## 🌐 Endpoints da API
+##  Endpoints da API
 
 Base URL: `http://localhost:3000/api`
 
@@ -253,13 +253,13 @@ Base URL: `http://localhost:3000/api`
 
 ---
 
-## 🐛 Problemas comuns
+##  Problemas comuns
 
 ### "Erro de conexão" no app
-- ✔️ Backend está rodando? → veja o terminal do `npm start`
-- ✔️ Firewall liberado? → comando `netsh` acima
-- ✔️ IP correto no `ApiClient.java`? → confira com `ipconfig`
-- ✔️ Celular e PC na mesma rede Wi-Fi?
+-  Backend está rodando? → veja o terminal do `npm start`
+-  Firewall liberado? → comando `netsh` acima
+-  IP correto no `ApiClient.java`? → confira com `ipconfig`
+-  Celular e PC na mesma rede Wi-Fi?
 
 ### "Access denied for user 'root'" no backend
 - A senha no `.env` está errada → edite `DB_PASSWORD`
@@ -278,14 +278,6 @@ Base URL: `http://localhost:3000/api`
 - Veja o **Logcat** no Android Studio (filtre por `com.mayarpg.app`)
 - Verifique se o IP em `ApiClient.java` está correto
 
----
-
-## 👥 Equipe
-
-[**ADICIONAR AQUI** os nomes e RAs do grupo]
-
----
-
 ## 📄 Licença
 
-Projeto acadêmico — FECAP — 2026/1.
+Projeto Interdisciplinar — Análise e Desenvolvimento de Sistemas, 3° Semestre | FECAP — 2026/1.
