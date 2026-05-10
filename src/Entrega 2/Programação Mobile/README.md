@@ -12,9 +12,9 @@ seus exercícios e backend Node.js + MySQL.
 
 ```
 maya-rpg/
-├── android-app/      # App Android (Java)
-├── backend/          # API REST (Node.js + Express)
-├── database/         # Script SQL (schema + dados de teste)
+├── Aplicativo/      # App Android (Java)
+├── Backend/          # API REST (Node.js + Express)
+├── BancoDeDados/         # Script SQL (schema + dados de teste)
 └── README.md
 ```
 
