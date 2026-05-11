@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const db = require('../config/database');
 
-// ==================== PACIENTES ====================
+// PACIENTES 
 exports.listarPacientes = async (req, res) => {
   try {
     const { busca, status } = req.query;
@@ -37,7 +37,7 @@ exports.detalhePaciente = async (req, res) => {
   } catch (e) { console.error(e); res.status(500).json({ erro: 'Erro' }); }
 };
 
-// ==================== EXERCICIOS ====================
+//  EXERCICIOS
 exports.listarExercicios = async (req, res) => {
   try {
     const [rows] = await db.query(
@@ -79,7 +79,7 @@ exports.excluirExercicio = async (req, res) => {
   } catch (e) { res.status(500).json({ erro: 'Erro' }); }
 };
 
-// ==================== PRESCRICOES ====================
+//  PRESCRICOES
 exports.criarPrescricao = async (req, res) => {
   try {
     const { pacienteId, exercicioId, frequencia, orientacoes, dataInicio, dataFim } = req.body;
@@ -103,7 +103,7 @@ exports.criarPrescricao = async (req, res) => {
   } catch (e) { console.error(e); res.status(500).json({ erro: 'Erro' }); }
 };
 
-// ==================== AGENDAMENTOS ====================
+// AGENDAMENTOS 
 exports.listarAgendamentos = async (req, res) => {
   try {
     const { dataInicio, dataFim } = req.query;
@@ -129,7 +129,7 @@ exports.atualizarStatusAgendamento = async (req, res) => {
   } catch (e) { res.status(500).json({ erro: 'Erro' }); }
 };
 
-// ==================== PAGAMENTOS ====================
+// PAGAMENTOS 
 exports.registrarPagamento = async (req, res) => {
   try {
     const { pacienteId, agendamentoId, descricao, valor, formaPagamento, dataPagamento } = req.body;
@@ -142,7 +142,7 @@ exports.registrarPagamento = async (req, res) => {
   } catch (e) { console.error(e); res.status(500).json({ erro: 'Erro' }); }
 };
 
-// ==================== DASHBOARD ADMIN ====================
+// DASHBOARD ADMIN 
 exports.dashboardAdmin = async (req, res) => {
   try {
     const [stats] = await db.query(`
