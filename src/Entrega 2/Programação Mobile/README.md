@@ -280,4 +280,4 @@ Base URL: `http://localhost:3000/api`
 
 ## 📄 Licença
 
-Projeto Interdisciplinar — Análise e Desenvolvimento de Sistemas, 3° Semestre | FECAP — 2026/1.
+Projeto Interdisciplinar | Grupo Hidex - Análise e Desenvolvimento de Sistemas, 3° Semestre | FECAP — 2026/1.
