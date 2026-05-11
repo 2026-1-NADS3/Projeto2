@@ -1,6 +1,6 @@
 # Maya RPG — Sistema de Gestão Fisioterápica
 
-> **Projeto Interdisciplinar** — 3º semestre ADS — FECAP — 2026/1
+> **Projeto Interdisciplinar** | 3º semestre ADS, FECAP 2026/1
 
 Sistema de gestão de tratamento fisioterápico para a Clínica
 **Maya Yoshiko Yamamoto**, com app Android para os pacientes acompanharem
