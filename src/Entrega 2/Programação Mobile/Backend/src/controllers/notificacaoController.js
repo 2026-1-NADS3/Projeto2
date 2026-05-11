@@ -28,7 +28,7 @@ exports.listar = async (req, res) => {
       [pacienteId]
     );
 
-    // Converte lida (TINYINT) para boolean para o app entender
+    // Converte lida para boolean para o app entender
     const resultado = notificacoes.map(n => ({
       ...n,
       lida: n.lida === 1
