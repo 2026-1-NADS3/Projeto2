@@ -72,7 +72,12 @@ A solução proposta consiste em um sistema multiplataforma integrado voltado à
 |readme.md<br>
 
 ## 📋 Licença
-<https://creativecommons.org/licenses/by/4.0/>
+
+O projeto **Hidex** foi desenvolvido em 2026 pelos integrantes Enzo Ribeiro, Rikelmy Anacleto, Bianca Morais e Matheus Canelutti, com fins acadêmicos e educacionais.
+
+© 2026 Hidex Team — Todos os direitos reservados aos autores.
+
+Este projeto está licenciado sob a licença **Creative Commons Attribution 4.0 International (CC BY 4.0)**, permitindo compartilhamento e adaptação do conteúdo mediante os devidos créditos aos desenvolvedores.
 
 ## 🎓 Referências
 
