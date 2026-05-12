@@ -1,6 +1,6 @@
 # Instituto Maya — Sistema de Gestão Clínica
 
-Sistema web para gestão da clínica de RPG (Reeducação Postural Global) Instituto Maya. Permite que profissionais da saúde gerenciem pacientes, agendamentos, equipe e visualizem indicadores clínicos em tempo real.
+Sistema web para gestão da clínica de RPG (Reeducação Postural Global) Instituto Maya. Permite que profissionais da saúde gerenciem pacientes, agendamentos, equipe e visualizem indicadores clínicos. Esta versão é um protótipo funcional com dados estáticos — sem dependência de backend ou API externa.
 
 ---
 
@@ -12,15 +12,12 @@ Sistema web para gestão da clínica de RPG (Reeducação Postural Global) Insti
 | Roteamento | React Router DOM 7 |
 | Estilização | Tailwind CSS |
 | Ícones | Lucide React |
-| HTTP | Fetch API nativo |
-| Backend | Node.js + Express (repositório separado) |
 
 ---
 
 ## Pré-requisitos
 
 - Node.js 18+
-- Backend da API rodando (ver repositório `maya-rpg-backend`)
 
 ---
 
@@ -29,20 +26,11 @@ Sistema web para gestão da clínica de RPG (Reeducação Postural Global) Insti
 **1. Clone o repositório e instale as dependências:**
 ```bash
 git clone <url-do-repositorio>
-cd Maya
+cd Site_Sem_API
 npm install
 ```
 
-**2. Configure as variáveis de ambiente:**
-
-Crie um arquivo `.env` na raiz do projeto:
-```env
-VITE_API_URL=http://localhost:3000
-```
-
-> Ajuste a URL caso o backend rode em outra porta ou endereço (ex: `http://192.168.0.159:3000` para acesso via celular na mesma rede).
-
-**3. Inicie o servidor de desenvolvimento:**
+**2. Inicie o servidor de desenvolvimento:**
 ```bash
 npm run dev
 ```
@@ -73,17 +61,21 @@ src/
 │       └── StatsCards.jsx    # Cards de indicadores numéricos
 ├── context/
 │   └── ModalContext.jsx      # Estado global dos modais
+├── data/
+│   ├── agendamentos.js       # Dados estáticos de agendamentos
+│   ├── dashboard.js          # Dados estáticos dos indicadores
+│   └── pacientes.js          # Dados estáticos de pacientes
 ├── hooks/
 │   └── useEscFechar.jsx      # Fecha modal ao pressionar Esc
 ├── pages/
 │   ├── Agenda/               # Agendamentos em visão diária e semanal
 │   ├── Dashboard/            # Painel principal com indicadores
 │   ├── Equipe/               # Membros cadastrados e níveis de acesso
-│   ├── Login/                # Tela de autenticação
+│   ├── Login/                # Tela de autenticação (mock)
 │   ├── Pacientes/            # Listagem, busca e detalhes de pacientes
-│   └── Perfil/               # Dados e senha do usuário logado
+│   └── Perfil/               # Dados do usuário logado
 └── service/
-    └── api.js                # Centraliza todas as chamadas à API
+    └── api.js                # Utilitário de autenticação (logout via localStorage)
 ```
 
 ---
@@ -91,10 +83,10 @@ src/
 ## Páginas
 
 ### Login
-Autenticação via e-mail e senha. O token JWT retornado é salvo no `localStorage` e enviado automaticamente em todas as requisições subsequentes. Usuários não autenticados são redirecionados para esta página automaticamente.
+Tela de autenticação com e-mail e senha. Qualquer combinação válida de campos é aceita — o login salva um token fictício e os dados do usuário no `localStorage`. Usuários não autenticados são redirecionados automaticamente para esta página.
 
 ### Dashboard
-Painel com indicadores em tempo real: atendimentos do dia, pacientes ativos, cancelamentos e planos vencendo. Exibe as próximas consultas do dia, taxa de ocupação e alertas da clínica. O nome do usuário logado é exibido na saudação.
+Painel com indicadores: atendimentos do dia, pacientes ativos, cancelamentos e planos vencendo. Exibe as próximas consultas do dia, taxa de ocupação e alertas da clínica. O nome do usuário logado é exibido na saudação.
 
 ### Agenda
 Visualização dos agendamentos em modo **Diário** (grade de horários de 08h às 15h) e **Semanal** (grade por dia da semana). Mini calendário lateral para navegação entre datas. Taxa de ocupação calculada automaticamente com base nos agendamentos do dia.
@@ -106,44 +98,21 @@ Lista completa de pacientes com busca por nome com autocomplete, filtro por stat
 Cards dos profissionais cadastrados com carrossel de navegação. Exibe especialidade, cargo, número de pacientes e registro profissional. Seção de níveis de acesso por perfil (Admin, Fisioterapeuta, Recepção).
 
 ### Perfil
-Edição de foto de perfil, dados pessoais e alteração de senha do usuário logado.
+Visualização de foto de perfil e dados do usuário logado.
 
 ---
 
-## Integração com a API
+## Dados estáticos
 
-Todas as chamadas HTTP estão centralizadas em `src/service/api.js`. O arquivo exporta módulos organizados por recurso:
+Todos os dados da aplicação estão definidos localmente em `src/data/`:
 
-```js
-import { auth, pacientes, agendamentos, dashboard } from './service/api'
+| Arquivo | Conteúdo |
+|---|---|
+| `pacientes.js` | Lista de pacientes com nome, diagnóstico, responsável e status |
+| `agendamentos.js` | Agendamentos do dia com horário, tipo e status |
+| `dashboard.js` | Indicadores numéricos e alertas do painel principal |
 
-// Exemplos de uso
-await auth.login(email, senha)
-await pacientes.listar()
-await agendamentos.listar()
-await dashboard.buscar()
-```
-
-O token JWT é lido automaticamente do `localStorage` e adicionado ao header `Authorization: Bearer <token>` em todas as requisições autenticadas.
-
-### Rotas consumidas
-
-| Módulo | Método | Rota |
-|---|---|---|
-| `auth.login` | POST | `/auth/login` |
-| `auth.cadastro` | POST | `/auth/cadastro` |
-| `dashboard.buscar` | GET | `/admin/dashboard` |
-| `pacientes.listar` | GET | `/admin/pacientes` |
-| `pacientes.buscar(id)` | GET | `/admin/pacientes/:id` |
-| `agendamentos.listar` | GET | `/admin/agendamentos` |
-| `agendamentos.atualizarStatus(id, status)` | PUT | `/admin/agendamentos/:id/status` |
-| `exercicios.listar` | GET | `/admin/exercicios` |
-| `exercicios.criar(dados)` | POST | `/admin/exercicios` |
-| `exercicios.atualizar(id, dados)` | PUT | `/admin/exercicios/:id` |
-| `exercicios.excluir(id)` | DELETE | `/admin/exercicios/:id` |
-| `prescricoes.criar(dados)` | POST | `/admin/prescricoes` |
-| `pagamentos.registrar(dados)` | POST | `/admin/pagamentos` |
-| `servicos.listar` | GET | `/servicos` |
+Para alterar os dados exibidos na interface, basta editar esses arquivos diretamente.
 
 ---
 
