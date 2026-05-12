@@ -73,11 +73,16 @@ A solução proposta consiste em um sistema multiplataforma integrado voltado à
 
 ## 📋 Licença
 
-O projeto **Hidex** foi desenvolvido em 2026 pelos integrantes Enzo Ribeiro, Rikelmy Anacleto, Bianca Morais e Matheus Canelutti, com fins acadêmicos e educacionais.
+O projeto <strong>Hidex</strong> foi desenvolvido em 2026 com fins acadêmicos e educacionais pelos integrantes:
+
+<a href="https://www.linkedin.com/in/enzo-ribeiro/" target="_blank">Enzo Ribeiro</a>, 
+<a href="https://www.linkedin.com/in/rikelmy-anacleto-07102006d18/" target="_blank">Rikelmy Anacleto</a>, 
+<a href="https://www.linkedin.com/in/biancafmoraiss/" target="_blank">Bianca Morais</a> e 
+<a href="https://www.linkedin.com/in/matheus-canelutti/" target="_blank">Matheus Canelutti</a>.
 
 © 2026 Hidex Team — Todos os direitos reservados aos autores.
 
-Este projeto está licenciado sob a licença **Creative Commons Attribution 4.0 International (CC BY 4.0)**, permitindo compartilhamento e adaptação do conteúdo mediante os devidos créditos aos desenvolvedores.
+Este projeto está licenciado sob a licença <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong>, permitindo compartilhamento e adaptação do conteúdo mediante os devidos créditos aos desenvolvedores.
 
 ## 🎓 Referências
 
