@@ -17,7 +17,7 @@ Utilize o site <https://www.toptal.com/developers/gitignore> para gerar seu arqu
 ## Descrição
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
+<img width="438" height="329" alt="image" src="https://github.com/user-attachments/assets/51a9d087-634c-4620-a71c-2d20b41d5f49" />
 </p>
 
 
