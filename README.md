@@ -27,39 +27,48 @@ A solução proposta consiste em um sistema multiplataforma integrado voltado à
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
-Projeto2/
-│
-├── .gitignore
-├── README.md
-│
-├── documentos/
-│   │
-│   ├── Entrega 1/
-│   │   ├── Programação Mobile/
-│   │   ├── Sistemas Operacionais e Arquitetura Cloud Native/
-│   │   └── Teste e Qualidade de Software/
-│   │
-│   ├── Entrega 2/
-│   │   ├── Programação Mobile/
-│   │   ├── Sistemas Operacionais e Arquitetura Cloud Native/
-│   │   └── Teste e Qualidade de Software/
-│   │
-│   ├── UX Design/
-│   │
-│   ├── banner/
-│   │
-│   └── Documento - Projeto de Extensão - COM Empresa - 2026.pdf
-│
-└── src/
-    │
-    ├── Entrega 1/
-    │   ├── Programação Mobile/
-    │   └── Sistemas Operacionais e Arquitetura Cloud Native/
-    │
-    └── Entrega 2/
-        ├── Programação Mobile/
-        ├── Sistemas Operacionais e Arquitetura Cloud Native/
-        └── Site/
+- Projeto2<br>
+|<br>
+|--> .gitignore<br>
+|--> README.md<br>
+|<br>
+|--> documentos<br>
+&emsp;|<br>
+&emsp;|--> Entrega 1<br>
+&emsp;&emsp;|--> Programação Mobile<br>
+&emsp;&emsp;|--> Sistemas Operacionais e Arquitetura Cloud Native<br>
+&emsp;&emsp;|--> Teste e Qualidade de Software<br>
+&emsp;|<br>
+&emsp;|--> Entrega 2<br>
+&emsp;&emsp;|--> Programação Mobile<br>
+&emsp;&emsp;|--> Sistemas Operacionais e Arquitetura Cloud Native<br>
+&emsp;&emsp;|--> Teste e Qualidade de Software<br>
+&emsp;|<br>
+&emsp;|--> UX Design<br>
+&emsp;&emsp;|--> (Entregas unificadas)<br>
+&emsp;|<br>
+&emsp;|--> banner<br>
+&emsp;|<br>
+&emsp;|--> Documento - Projeto de Extensão - COM Empresa - 2026.pdf<br>
+|<br>
+|--> imagens<br>
+&emsp;|--> UX Design<br>
+&emsp;&emsp;|--> Mapa de Jornada<br>
+&emsp;&emsp;|--> Personas<br>
+&emsp;&emsp;|--> User Stories<br>
+&emsp;&emsp;|--> Wireframe (Baixa Fidelidade)<br>
+&emsp;&emsp;|--> Quadro HEART + GSM<br>
+&emsp;&emsp;|--> Wireframe Alta Fidelidade<br>
+|<br>
+|--> src<br>
+&emsp;|--> Entrega 1<br>
+&emsp;&emsp;|--> Programação Mobile<br>
+&emsp;&emsp;|--> Sistemas Operacionais e Arquitetura Cloud Native<br>
+&emsp;|<br>
+&emsp;|--> Entrega 2<br>
+&emsp;&emsp;|--> Programação Mobile<br>
+&emsp;&emsp;|--> Sistemas Operacionais e Arquitetura Cloud Native<br>
+&emsp;&emsp;|--> Site<br>
 |readme.md<br>
 
 ## 📋 Licença
