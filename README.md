@@ -17,9 +17,10 @@ Utilize o site <https://www.toptal.com/developers/gitignore> para gerar seu arqu
 ## Descrição
 
 <p align="center">
-<img width="438" height="329" alt="image" src="https://github.com/user-attachments/assets/51a9d087-634c-4620-a71c-2d20b41d5f49" />
+  <img width="438" height="329" alt="image" src="https://github.com/user-attachments/assets/51a9d087-634c-4620-a71c-2d20b41d5f49" />
 </p>
-# Hidex - Maya Yamamoto
+
+<h1 align="center">Hidex - Maya Yamamoto</h1>
 
 A solução proposta consiste em um sistema multiplataforma integrado voltado à gestão e execução de tratamentos de RPG. O projeto engloba um Módulo Web para administração clínica, um Banco de Dados centralizado para persistência de prontuários e um Aplicativo Mobile focado na jornada do paciente. A arquitetura permite a automação do fluxo de trabalho, desde a prescrição de planos de exercícios com suporte multimídia até a coleta de dados de execução (check-in) e indicadores de evolução clínica, garantindo a integridade das informações e a continuidade do cuidado fisioterapêutico.
 <br><br>
