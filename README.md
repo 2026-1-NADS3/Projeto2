@@ -86,10 +86,17 @@ Este projeto está licenciado sob a licença <strong>Creative Commons Attributio
 
 ## 🎓 Referências
 
-Aqui estão as referências usadas no projeto.
+Aqui estão algumas das principais referências utilizadas no desenvolvimento do projeto:
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://chooser-beta.creativecommons.org/>
-4. <https://www.toptal.com/developers/gitignore>
+1. <https://iso25000.com/index.php/en/iso-25000-standards/iso-25010>  
+   Utilizada como referência para métricas de qualidade de software, usabilidade, eficiência e confiabilidade do sistema.
+
+2. <https://m3.material.io/>  
+   Utilizada para definição do design visual, componentes de interface, cores, tipografia e boas práticas de UI seguindo o Material Design 3.
+
+3. <https://developer.android.com/design?hl=pt-br>  
+   Utilizada como base para padrões de experiência do usuário, acessibilidade e desenvolvimento de interfaces mobile Android.
+
+4. <https://www.nngroup.com/>  
+   Utilizada como referência em conceitos de UX Design, usabilidade, heurísticas e experiência do usuário.
 
