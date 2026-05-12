@@ -1,7 +1,3 @@
-```sh
-Utilize o site <https://www.toptal.com/developers/gitignore> para gerar seu arquivo gitignore
-```
-
 # FECAP - Fundação de Comércio Álvares Penteado
 
 <p align="center">
