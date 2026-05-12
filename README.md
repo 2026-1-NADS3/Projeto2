@@ -28,21 +28,48 @@ A solução proposta consiste em um sistema multiplataforma integrado voltado à
 
 -Raiz<br>
 |<br>
-|-->documentos<br>
-  &emsp;|-->Entrega 1<br>
-  &emsp;&emsp;|Programação Mobile<br>
-  &emsp;&emsp;|Sistemas Operacionais e Arquitetura Cloud Native<br>
-  &emsp;&emsp;|Teste e Qualidade de Software<br>
-  &emsp;&emsp;|UX Design<br>
-  &emsp;|-->Entrega 2<br>
-  &emsp;&emsp;|Programação Mobile<br>
-  &emsp;&emsp;|Sistemas Operacionais e Arquitetura Cloud Native<br>
-  &emsp;&emsp;|Teste e Qualidade de Software<br>
-  &emsp;&emsp;|UX Design<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
+- Projeto2<br>
+|<br>
+|--> .gitignore<br>
+|--> README.md<br>
+|<br>
+|--> documentos<br>
+&emsp;|<br>
+&emsp;|--> Entrega 1<br>
+&emsp;&emsp;|--> Programação Mobile<br>
+&emsp;&emsp;|--> Sistemas Operacionais e Arquitetura Cloud Native<br>
+&emsp;&emsp;|--> Teste e Qualidade de Software<br>
+&emsp;|<br>
+&emsp;|--> Entrega 2<br>
+&emsp;&emsp;|--> Programação Mobile<br>
+&emsp;&emsp;|--> Sistemas Operacionais e Arquitetura Cloud Native<br>
+&emsp;&emsp;|--> Teste e Qualidade de Software<br>
+&emsp;|<br>
+&emsp;|--> UX Design<br>
+&emsp;&emsp;|--> (Entregas unificadas)<br>
+&emsp;|<br>
+&emsp;|--> banner<br>
+&emsp;|<br>
+&emsp;|--> Documento - Projeto de Extensão - COM Empresa - 2026.pdf<br>
+|<br>
+|--> imagens<br>
+&emsp;|--> UX Design<br>
+&emsp;&emsp;|--> Mapa de Jornada<br>
+&emsp;&emsp;|--> Personas<br>
+&emsp;&emsp;|--> User Stories<br>
+&emsp;&emsp;|--> Wireframe (Baixa Fidelidade)<br>
+&emsp;&emsp;|--> Quadro HEART + GSM<br>
+&emsp;&emsp;|--> Wireframe Alta Fidelidade<br>
+|<br>
+|--> src<br>
+&emsp;|--> Entrega 1<br>
+&emsp;&emsp;|--> Programação Mobile<br>
+&emsp;&emsp;|--> Sistemas Operacionais e Arquitetura Cloud Native<br>
+&emsp;|<br>
+&emsp;|--> Entrega 2<br>
+&emsp;&emsp;|--> Programação Mobile<br>
+&emsp;&emsp;|--> Sistemas Operacionais e Arquitetura Cloud Native<br>
+&emsp;&emsp;|--> Site<br>
 |readme.md<br>
 
 ## 📋 Licença
